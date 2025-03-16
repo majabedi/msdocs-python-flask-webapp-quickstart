@@ -1,4 +1,6 @@
 import os
+import logging
+
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
@@ -29,4 +31,6 @@ def hello():
 
 
 if __name__ == '__main__':
+   logging.basicConfig(level=logging.INFO)
+   logging.info("This is an info message")
    app.run()
