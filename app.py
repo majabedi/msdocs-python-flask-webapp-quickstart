@@ -29,8 +29,10 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+logging.basicConfig(level=logging.INFO)
+
+logger = logging.getLogger(__name__)
 
 if __name__ == '__main__':
-   logging.basicConfig(level=logging.INFO)
    logging.info("This is an info message")
    app.run()
